@@ -3,7 +3,7 @@
 ## 1. System Requirements
 To ensure a smooth hands-on experience, participants should have the following:
 
-- **Operating System:** Windows 10/11 (Pro, Enterprise, or Education), macOS (Intel or M1/M2).
+- **Operating System:** Windows 10/11 (Pro, Enterprise, or Education), macOS (Intel or M1/M2), or Linux (Ubuntu, Debian, Fedora, etc.).
 - **Processor:** 64-bit processor with virtualization enabled in BIOS.
 - **RAM:** Minimum 4GB (8GB recommended).
 - **Disk Space:** At least 10GB free for Docker images and containers.
@@ -25,6 +25,7 @@ To ensure a smooth hands-on experience, participants should have the following:
    ```sh
    docker --version
    ```
+7. **Video Guide for Windows Installation:** [Watch here](https://www.youtube.com/watch?v=bw-bMhlhcpg)
 
 ### **For macOS**
 1. Download **Docker Desktop for Mac** from: [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/)
@@ -34,6 +35,31 @@ To ensure a smooth hands-on experience, participants should have the following:
    ```sh
    docker --version
    ```
+5. **Video Guide for Mac Installation:** [Watch here](https://www.youtube.com/watch?v=-EXlfSsP49A)
+
+### **For Linux (Ubuntu/Debian-based)**
+1. Update package lists:
+   ```sh
+   sudo apt update
+   ```
+2. Install Docker:
+   ```sh
+   sudo apt install docker.io
+   ```
+3. Start and enable Docker:
+   ```sh
+   sudo systemctl start docker
+   sudo systemctl enable docker
+   ```
+4. Verify installation:
+   ```sh
+   docker --version
+   ```
+5. **Optional:** Add your user to the Docker group to run Docker without sudo:
+   ```sh
+   sudo usermod -aG docker $USER
+   ```
+   Log out and log back in for changes to take effect.
 
 ---
 
@@ -44,6 +70,10 @@ docker-compose --version
 ```
 If not installed, follow these steps:
 - **Windows/macOS**: Included with Docker Desktop.
+- **Linux**: Install manually:
+   ```sh
+   sudo apt install docker-compose
+   ```
 
 ---
 
@@ -81,4 +111,3 @@ After installation, confirm Docker is running correctly:
 - Join the workshop on time with Docker running!
 
 🚀 **See you at the workshop!**
-
